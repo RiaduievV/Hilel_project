@@ -177,6 +177,18 @@ a {
   -webkit-transition-property: background-color;
   transition-property: background-color;
 }
+.header__lang a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.header__lang.about-lang a:hover {
+  background-color: #F5F5FA;
+}
+.header__lang a.active:hover {
+  background-color: #F0145A;
+}
+.header__lang a.active.about-active:hover {
+  background-color: #F0145A;
+}
 .header__lang a.active {
   background-color: #F0145A;
 }
@@ -251,18 +263,6 @@ a {
   }
   .header__info.about-info {
     background-color: transparent;
-  }
-  .header__lang a:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  .header__lang.about-lang a:hover {
-    background-color: #F5F5FA;
-  }
-  a.active:hover {
-    background-color: #F0145A;
-  }
-  a.active.about-active:hover {
-    background-color: #F0145A;
   }
   .header__adress,
   .header__fb {

@@ -41,6 +41,18 @@
             transition-duration: 0.4s;
             transition-property: background-color;
         }
+        & a:hover {
+            background: rgba(255, 255, 255, 0.20);
+        }
+        &.about-lang a:hover {
+            background-color: $bg;
+        }
+        a.active:hover {
+            background-color: $red;
+        }
+        a.active.about-active:hover {
+            background-color: $red;
+        }
         a.active {
             background-color: $red;
         }
@@ -106,18 +118,6 @@
     }
     .header__info.about-info {
         background-color: transparent;
-    }
-    .header__lang a:hover {
-        background: rgba(255, 255, 255, 0.20);
-    }
-    .header__lang.about-lang a:hover {
-        background-color: $bg;
-    }
-    a.active:hover {
-        background-color: $red;
-    }
-    a.active.about-active:hover {
-        background-color: $red;
     }
     .header__adress,
     .header__fb {
