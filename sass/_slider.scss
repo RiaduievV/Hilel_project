@@ -1,0 +1,155 @@
+.slider {
+   padding-top: 50px;
+   padding-bottom: 60px;
+   &__wrap {
+      display: grid;
+      padding-bottom: 30px;
+   }
+   &__wrap-img {
+      background-image: url(../img/face1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      border-radius: 12px 12px 0px 0px;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      &__wrap-img {
+          background-image: url(../img/face1@2x.jpg);
+      }
+   }
+   &__wrap-block {
+      padding: 30px 25px 30px 25px;
+      &-link {
+         font-size: 14px;
+         font-weight: 700;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         color: $blue;
+         display: inline-flex;
+         align-items: center;
+         padding-bottom: 5px;
+         &:hover {
+            color: $red;
+            transition-duration: 0.8s;
+            transition-property: color;
+         }
+         &:hover .slider-hover {
+            stroke: $red;
+            transition-duration: 0.8s;
+            transition-property: stroke;
+         }
+      }
+      &-title {
+         font-size: 30px;
+         background: $linear-red-text;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         padding-bottom: 30px;
+         word-wrap: break-word;
+      }
+      &-subtitle {
+         font-size: 16px;
+         color: $text;
+         padding-bottom: 6px;
+      }
+      &-text {
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 22px;
+         color: $text;
+      }
+   }
+   &__button {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      &-btn {
+         width: 16px;
+         height: 16px;
+         border: 0;
+         border-radius: 50%;
+         background-color: $blue;
+         opacity: 0.2;
+         cursor: pointer;
+      }
+      &-btn.button-active {
+         opacity: 1;
+      }
+      &-btn:hover {
+         opacity: 0.6;
+      }
+      &-btn.button-active:hover {
+         opacity: 1;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .slider {
+      padding-top: 80px;
+   }
+   .slider__wrap-block {
+      background-color: $bg;
+      padding: 30px;
+      border-radius: 0px 0px 12px 12px;
+      padding: 30px;
+   }
+   .slider__wrap-img {
+      background-image: url(../img/face2.jpg);
+      height: 500px;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .slider__wrap-img {
+          background-image: url(../img/face2@2x.jpg);
+      }
+   }
+   .slider__wrap-block-title {
+      font-size: 38px;
+   }
+}
+
+@media (min-width: 992px) {
+   .slider__wrap {
+      grid-template-columns: 400px 1fr;
+   }
+   .slider__wrap-block {
+      border-radius: 0px 12px 12px 0px;
+      width: 100%;
+   }
+   .slider__wrap-img {
+      background-image: url(../img/face3.jpg);
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px 0px 0px 12px;
+      height: 100%;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .slider__wrap-img {
+          background-image: url(../img/face3@2x.jpg);
+      }
+   }
+   .slider_wrap-block-title {
+      margin-top: auto;
+   }
+}
+
+@media (min-width: 1200px) {
+   .slider__wrap {
+      grid-template-columns: 400px 1fr;
+   }
+   .slider__wrap-block {
+      padding: 30px 30px 30px 30px;
+   }
+   .slider__wrap-img {
+      background-image: url(../img/face4.png);
+      height: 100%;
+      background-size: cover;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .slider__wrap-img {
+          background-image: url(../img/face4@2x.png);
+      }
+   }
+}

@@ -1,0 +1,44 @@
+.info {
+   padding-bottom: 60px;
+   &__wrap {
+      display: grid;
+      gap: 11px;
+      &-text {
+         font-size: 19px;
+         font-weight: 400;
+         line-height: 30px;
+         color: $black;
+      }
+      &-title {
+         font-size: 30px;
+         background: $linear-red-text;
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .info__wrap {
+      gap: 30px;
+   }
+   .info__wrap-title {
+      font-size: 38px;
+   }
+}
+
+@media (min-width: 992px) {
+   .info__wrap {
+      gap: 60px;
+      grid-template-columns: 1fr 362px;
+   }
+}
+
+@media (min-width: 992px) {
+   .info__wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+   }
+}
+

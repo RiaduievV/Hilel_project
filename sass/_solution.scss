@@ -1,0 +1,63 @@
+.solution {
+   padding-top: 129px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   &__title {
+      color: $white;
+      text-align: center;
+      font-size: 38px;
+      padding-bottom: 159px;
+   }
+   &__wrap {
+      display: flex;
+      justify-content: center;
+      &-link {
+         display: inline-flex;
+         position: relative;
+         &:hover .circle {
+            stroke: $red;
+            transition-duration: 1s;
+         }
+         &:hover .circle-path {
+            stroke: $red;
+            animation-name: spinner;
+            animation-delay: 0.4s;
+            animation-duration: 1s;
+            animation-iteration-count: 1s;
+         }
+      }
+   }
+   @keyframes spinner {
+      100% {
+         transform: rotate(360deg);
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .solution {
+      padding-top: 269px;
+      &__title {
+         padding-bottom: 417px;
+      }
+   }
+}
+
+@media (min-width: 992px) {
+   .solution {
+      padding-top: 225px;
+      &__title {
+         padding-bottom: 289px;
+      }
+   }
+}
+
+@media (min-width: 1200px) {
+   .solution {
+      padding-top: 218px;
+      &__title {
+         padding-bottom: 305px;
+      }
+   }
+}

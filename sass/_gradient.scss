@@ -1,0 +1,45 @@
+.gradient {
+   background: url(../img/back.svg) no-repeat center top, $linear-supersoft;
+   border-radius: 0px 0px 12px 12px;
+   position: relative;
+   background-color: $gradient;
+
+   &::after {
+       content: '';
+       border-radius: 0px 0px 12px 12px;
+       background: $mainbottom;
+       height: 10px;
+       position: absolute;
+       left: 20px;
+       right: 20px;
+       bottom: -10px;
+   }
+   &::before {
+       content: '';
+       border-radius: 0px 0px 12px 12px;
+       background: $bottom;
+       height: 10px;
+       position: absolute;
+       left: 40px;
+       right: 40px;
+       bottom: -20px;
+   }
+}
+
+@media (min-width: 768px) {
+   .gradient {
+       background-size: 893px 1024px, cover;
+   }
+}
+
+@media (min-width: 992px) {
+   .gradient {
+       background-size: 670px 768px, cover;
+   }
+}
+
+@media (min-width: 1200px) {
+   .gradient {
+       background-size: 697px 799px, cover;
+   }
+}

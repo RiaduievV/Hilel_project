@@ -1,0 +1,151 @@
+.switch {
+   padding-bottom: 30px;
+   background-color: $bg;
+   &__block {
+      border-bottom: 2px solid $separator;
+      display: grid;
+      gap: 30px;
+      padding: 0 30px 29px;
+   }
+   &__block-title {
+      padding-top: 32px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $main;
+   }
+   &__block-wrap {
+      display: grid;
+      gap: 40px;
+   }
+   &__block-wrap-legal {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: $white;
+      border-radius: 12px;
+      &-img {
+         background-image: url(../img/legal.png);
+         background-position: center center;
+         background-repeat: no-repeat;
+         height: 40px;
+         background-size: contain;
+      }
+   }
+   &__block-wrap-court {
+      display: none;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: $white;
+      border-radius: 12px;
+      &-img {
+         background-image: url(../img/court.png);
+         background-position: center center;
+         background-repeat: no-repeat;
+         height: 40px;
+         background-size: contain;
+      }
+   }
+   &__block-wrap-leader {
+      display: none;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: $white;
+      border-radius: 12px;
+      &-img {
+         background-image: url(../img/leader.png);
+         background-position: center center;
+         background-repeat: no-repeat;
+         height: 40px;
+         background-size: contain;
+      }
+   }
+   &__block-wrap-uif {
+      display: none;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      background-color: $white;
+      border-radius: 12px;
+      &-img {
+         background-image: url(../img/uif.png);
+         background-position: center center;
+         background-repeat: no-repeat;
+         height: 40px;
+         background-size: contain;
+      }
+   }
+   &__block-scroll {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      &-btn {
+         width: 16px;
+         height: 16px;
+         border: none;
+         border-radius: 50%;
+         background-color: $blue;
+         opacity: 0.2;
+         cursor: pointer;
+      }
+      &-btn.active {
+         opacity: 1;
+      }
+      &-btn:hover {
+         opacity: 0.6;
+      }
+      &-btn.active:hover {
+         opacity: 1;
+      }
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      &__block-wrap-legal-img {
+         background-image: url(../img/legal@2x.png);
+      }
+      &__block-wrap-court-img {
+         background-image: url(../img/court@2x.png);
+      }
+      &__block-wrap-leader-img {
+         background-image: url(../img/leader@2x.png);
+      }
+      &__block-wrap-uif-img {
+         background-image: url(../img/uif@2x.png);
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .switch__block {
+      padding-left: 0px;
+      padding-right: 0px;
+   }
+   .switch__block-wrap {
+      grid-template-columns: repeat(4, 1fr);
+   }
+   .switch__block-wrap-court {
+      display: block;
+   }
+   .switch__block-wrap-leader {
+      display: block;
+   }
+   .switch__block-wrap-uif {
+      display: block;
+   }
+   .btn-block {
+      display: none;
+   }
+}
+
+@media (min-width: 992px) {
+   .switch__block-wrap-legal-img {
+      height: 60px;
+   }
+   .switch__block-wrap-court-img {
+      height: 60px;
+   }
+   .switch__block-wrap-leader-img {
+      height: 60px;
+   }
+   .switch__block-wrap-uif-img {
+      height: 60px;
+   }
+}

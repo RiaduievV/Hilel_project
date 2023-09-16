@@ -1,0 +1,107 @@
+.menu {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   &__btn {
+      background-image: url(../img/hamburger.svg);
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+   }
+   &__btn.about-btn {
+      background-image: url(../img/hamburger-about.svg);
+   }
+   &__btn.active {
+      background-image: url(../img/close.svg);
+   }
+   &__list {
+      display: none;
+   }
+   &__burger {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      gap: 15px;
+      list-style: none;
+      padding-left: 0;
+      top: 100px;
+      left: 0;
+      text-align: center;
+      justify-content: center;
+      font-size: 24px;
+      width: 100%;
+      border-radius: 12px;
+      background-color: $white;
+      padding: 12px 0;
+   }
+   .menu__burger-link {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      background-color: $bg;
+      width: 351px;
+      border-radius: 12px;
+      color: $blue;
+      font-size: 24px;
+   }
+   .bg {
+      background-color: $separator;
+   }
+   .red {
+      color: $red;
+   }
+}
+
+@media (min-width: 768px) {
+   .menu {
+      display: flex;
+      justify-content: flex-start;
+   }
+   .menu__btn {
+      display: none;
+   }
+   .menu__list {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      padding-left: 0;
+   }
+   .menu__list-link {
+      color: $white;
+      font-size: 16px;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 3px;
+      transition-duration: 0.7s;
+      transition-property: border-bottom;
+   }
+   .menu__list-link:hover {
+      border-bottom: 2px solid $white;
+   }
+   .about-menu .menu__list-link {
+      color: $blue;
+      border-bottom: 2px solid transparent;
+      transition-duration: 0.7s;
+      transition-property: color, border-bottom;
+   }
+   .menu__list-link.red {
+      color: $red;
+      border-bottom: 2px solid $red;
+   }
+   .about-menu .menu__list-link:hover {
+      color: $red;
+      border-bottom: 2px solid $red;
+   }
+}
+
+@media (min-width: 992px) {
+   .menu {
+      padding-top: 10px;
+      align-items: flex-start;
+      justify-self: end;
+   }
+   .menu.about-menu {
+      padding-top: 16px;
+   }
+}

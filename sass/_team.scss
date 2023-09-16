@@ -1,0 +1,38 @@
+.team {
+   padding-bottom: 30px;
+   &__img {
+      display: block;
+      background-image: url(../img/team.jpg);
+      background-repeat: no-repeat;
+      height: 114px;
+      background-size: cover;
+      background-position: center center;
+      background-color: $team; 
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      &__img {
+          background-image: url(../img/team@2x.jpg);
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .team {
+      padding-bottom: 60px;
+   }
+   .team__img {
+      height: 244px;
+   }
+}
+
+@media (min-width: 992px) {
+   .team__img {
+      height: 311px;
+   }
+}
+
+@media (min-width: 1200px) {
+   .team__img {
+      height: 438px;
+   }
+}

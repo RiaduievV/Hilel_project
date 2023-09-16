@@ -1,0 +1,169 @@
+.pic {
+   &__title {
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $main;
+      padding-bottom: 30px;
+   }
+   &__wrap {
+      display: grid;
+      &-hil {
+         background-image: url(../img/hilel.png);
+         height: 120px;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+      }
+      &-wanna {
+         background-image: url(../img/wannabiz.png);
+         height: 120px;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+      }
+      &-targ {
+         background-image: url(../img/tabgerin.png);
+         height: 120px;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+      &-look3d {
+         background-image: url(../img/3dlok.png);
+         height: 120px;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+      &-oran {
+         background-image: url(../img/orangear.png);
+         height: 120px;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+      &-adte {
+         background-image: url(../img/adteligent.png);
+         height: 120px;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+      }
+   }
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+   .pic__wrap-hil {
+       background-image: url(../img/hilel@2x.png);
+   }
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+   .pic__wrap-wanna {
+       background-image: url(../img/wannabiz@2x.png);
+   }
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+   .pic__wrap-targ {
+       background-image: url(../img/tabgerin@2x.png);
+   }
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+   .pic__wrap-look3d {
+       background-image: url(../img/3dlook@2x.png);
+   }
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+   .pic__wrap-oran {
+       background-image: url(../img/oranger@2x.png);
+   }
+}
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+   .pic__wrap-adte {
+       background-image: url(../img/adte@2x.png);
+   }
+}
+
+@media (min-width: 768px) {
+   .pic__wrap {
+      grid-template-columns: repeat(3, 1fr);
+   }
+   .pic__wrap-click {
+      background-image: url(../img/click.png);
+      height: 120px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .pic__wrap-click {
+          background-image: url(../img/click@2x.png);
+      }
+   }
+   .pic__wrap-eco {
+      background-image: url(../img/eco.png);
+      height: 120px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .pic__wrap-eco {
+          background-image: url(../img/eco@2x.png);
+      }
+   }
+   .pic__wrap-infra {
+      background-image: url(../img/infra.png);
+      height: 120px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .pic__wrap-infra {
+          background-image: url(../img/infra@2x.png);
+      }
+   }
+   .pic__wrap-city {
+      background-image: url(../img/city.png);
+      height: 120px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .pic__wrap-city {
+          background-image: url(../img/city@2x.png);
+      }
+   }
+   .pic__wrap-art {
+      background-image: url(../img/art.png);
+      height: 120px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .pic__wrap-art {
+          background-image: url(../img/art@2x.png);
+      }
+   }
+   .pic__wrap-ulti {
+      background-image: url(../img/ulti.png);
+      height: 120px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+      .pic__wrap-ulti {
+          background-image: url(../img/ulti@2x.png);
+      }
+   }
+}
+
+@media (min-width: 992px) {
+   .pic__wrap {
+      grid-template-columns: repeat(4, 1fr);
+   }
+}

@@ -1,0 +1,122 @@
+.cards {
+    background-color: $bg;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__link {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $blue;
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        padding-bottom: 5px;
+        &:hover {
+            color: $red;
+            transition-duration: 0.8s;
+            transition-property: color;
+        }
+        &:hover .cards-hover {
+            stroke: $red;
+            transition-duration: 0.8s;
+            transition-property: stroke;
+        }
+    }
+    &__title {
+        font-size: 30px;
+        background: $linear-red-text;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 30px;
+    }
+    &__wrap {
+        display: grid;
+        gap: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid $separator;
+    }
+    &__wrap-item-block {
+        background-color: $white;
+        height: 100%;
+    }
+    &__wrap-item-block-img {
+        width: 100%;
+        display: block;
+    }
+    &__wrap-item-block-none-img {
+        width: 100%;
+        display: block;
+    }
+    &__wrap-item-block-card {
+        padding: 30px;
+        &-title {
+            font-size: 16px;
+            color: $blue;
+            padding-bottom: 15px;
+            &:hover {
+                color: $red;
+                transition-duration: 0.8s;
+                transition-property: color;
+            }
+        }
+        &-subtitle {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: $text;
+            padding-bottom: 15px;
+            border-bottom: 4px solid $separator;
+        }
+        &-text {
+            padding-top: 15px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $black;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .cards__title {
+        font-size: 38px;
+    }
+    .cards__wrap {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+    .cards__wrap-item:last-child {
+        grid-column: 1 / -1;
+    }
+    .cards__wrap-item-block-none {
+        background-image: url(../img/friends768.png);
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px 8px 0px 0px;
+    }
+    @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+        .cards__wrap-item-block-none {
+            background-image: url(../img/friends768@2x.png);
+        }
+    }
+    .cards__wrap-item-block-none-img {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .cards__wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cards__wrap-item:last-child {
+        grid-column: 3 / 4;
+    }
+    .cards__wrap-item-block-none {
+        height: auto;
+    }
+    .cards__wrap-item-block-none-img {
+        display: block;
+    }
+}
