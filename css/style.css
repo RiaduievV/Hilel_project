@@ -594,21 +594,19 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 30px;
   overflow: auto;
   list-style: none;
   padding-left: 0;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
 }
 .scroll ::-webkit-scrollbar {
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
-}
-.scroll ::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
-.scroll ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 144px;
+  display: none;
 }
 .scroll__switch-item {
   white-space: nowrap;
@@ -690,6 +688,7 @@ a {
     -ms-flex-line-pack: start;
         align-content: flex-start;
     justify-items: flex-end;
+    border-bottom: none;
   }
   .scroll__switch-item {
     padding: 0;
